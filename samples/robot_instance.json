@@ -1,0 +1,15 @@
+{
+    "url":"https://esaj.tjac.jus.br/cpopg/open.do",
+    "hash": "",
+    "search":[
+        {"name":"comarca", "id": "id_Comarca", "type":"select"},
+        {"name":"tipo_pesquisa", "id": "cbPesquisa", "type":"select"},
+        {"name":"tipo_pesquisa", "id": "cbPesquisa", 
+            "type":"select", "value":"NMPARTE"},
+        {"name":"nome_completo", "id":"id_tag.checkbox.nomecompleto.rotulo", 
+            "value":true}
+    ],
+    "result":{
+        "where":{"type":"div", "id":"listagemDeProcessos"}
+    }
+}

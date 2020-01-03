@@ -1,0 +1,18 @@
+{
+    "database":{
+        "port":"127.0.0.1",
+        "name":"postgres",
+        "password (hash?)":"1234sdaswd"
+    },
+    "webdriver":{
+        "name":"firefox (to lower case in check moment)",
+        "path":"default (maybe left empty if it's on system path)"
+    },
+    "system?":{
+        "os_name":"linux"
+    },
+    "runtime":{
+        "threads":5,
+        "mem_limit_MB(see if it's viable)":4096
+    }
+}
