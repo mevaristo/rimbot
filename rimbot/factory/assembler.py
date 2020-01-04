@@ -4,7 +4,11 @@ here
 
 Define robot modes and threads here
 
-Uses robot_core.json to define such things
+Uses core_blueprint.json to define such things
 
 
 """
+
+import rimbot.factory.blueprint_reader
+
+

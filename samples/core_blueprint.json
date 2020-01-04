@@ -13,6 +13,7 @@
     },
     "runtime":{
         "threads":5,
-        "mem_limit_MB(see if it's viable)":4096
+        "mem_limit_MB(see if it's viable)":4096,
+        "time_interval(minutes)":30
     }
 }
