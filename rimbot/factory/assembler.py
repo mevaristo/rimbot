@@ -4,11 +4,17 @@ here
 
 Define robot modes and threads here
 
-Uses core_blueprint.json to define such things
+Uses a configuration interface such as core_blueprint.json to define such things
 
 
 """
 
-import rimbot.factory.blueprint_reader
+class Assembler:
+    """
+    """
+    
+    def __init__(self):
+        super().__init__()
+
 
 

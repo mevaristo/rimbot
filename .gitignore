@@ -2,3 +2,4 @@ localtests
 *.log
 *.mylocal
 .vscode
+__pycache__
