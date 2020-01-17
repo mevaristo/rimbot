@@ -1,4 +1,16 @@
-from app import app 
+from flask import Flask, render_template
+
+server = Flask(__name__)
+
+@server.route('/login')
+def login():
+    return render_template('login.html')
+
+@server.route('/index')
+def index():
+    return render_template('index.html')
 
 if __name__ == "__main__":
-    app.run(host='127.0.0.1',port='8090')
+    server.run(host='127.0.0.1',port='8090', debug=True)
+
+
