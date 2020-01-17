@@ -1,3 +1,4 @@
+"""
 from flask import Flask, render_template
 
 server = Flask(__name__)
@@ -9,3 +10,5 @@ def login():
 @server.route('/index')
 def index():
     return render_template('index.html')
+"""
+
