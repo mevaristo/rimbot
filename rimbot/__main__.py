@@ -14,9 +14,8 @@ def index():
     return render_template('index.html')
 """
 
-from rimbot import webserver as server
+from webserver.server import server
 
-if __name__ == "__main__":
-    server.webserver.run(host='127.0.0.1',port='8090', debug=True)
+server.run(host='127.0.0.1',port='8090', debug=True)
 
 
