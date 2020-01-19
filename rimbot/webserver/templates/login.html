@@ -3,24 +3,29 @@
 {% block title %} Login {% endblock title %}
 
 {% block body %}
-<form>
-    <h1>Login Form</h1>
+<form action="" method="post" novalidate>
+  {{ form.hidden_tag() }}
+  <h1>Sign In</h1>
     <div class="formcontainer">
-    <hr/>
-    <div class="container">
-      <label for="uname"><strong>Username</strong></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-      <label for="psw"><strong>Password</strong></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <div class="container">
+        <p>
+          {{ form.username.label }} <br>
+          {{ form.username(size=32, class='input') }}
+        </p>
+        <p>
+          {{ form.password.label }} <br>
+          {{ form.password(size=32, class='input') }}
+        </p>
+      </div>
+      <div name="remember_me" class="btn-block">
+        <p>
+          {{ form.remember_me.label }}
+          {{ form.remember_me }}
+        </p>
+      </div>
+      <div class="btn-block">
+        {{ form.submit() }}
+      </div>
     </div>
-    <div class="btn-block">
-      <button type="submit">Login</button>
-    </div>
-    <div class="container" style="background-color: #eee">
-      <label style="padding-left: 15px">
-      <input type="checkbox"  checked="checked" name="remember"> Remember me
-      </label>
-      <span class="psw"><a href="#"> Forgot password?</a></span>
-    </div>
-  </form>
-  {% endblock body %}
+</form>
+{% endblock body %}
