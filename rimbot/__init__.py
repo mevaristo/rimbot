@@ -1,15 +1,8 @@
-"""
-from flask import Flask, render_template
+from rimbot.webserver.server import server
+from rimbot.config import Config
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 
-server = Flask(__name__)
-
-@server.route('/login')
-def login():
-    return render_template('login.html')
-
-@server.route('/index')
-def index():
-    return render_template('index.html')
-"""
-
-# from server import server
+server.config.from_object(Config)
+database = SQLAlchemy(server)
+migrate = Migrate(server, database)
