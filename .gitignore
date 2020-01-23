@@ -3,3 +3,4 @@ localtests
 *.mylocal
 .vscode
 __pycache__
+rimbot_venv

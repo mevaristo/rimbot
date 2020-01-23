@@ -2,36 +2,36 @@
 
 {% block title %} Login {% endblock title %}
 
-{% block body %}
-<form action="" method="post" novalidate>
-  {{ form.hidden_tag() }}
-  <h1>Sign In</h1>
-    <div class="formcontainer">
-      <div class="container">
-        <p>
-          {{ form.username.label }} <br>
-          {{ form.username(size=32, class='input') }}
+{% block content %}
+<div class="center">
+  <form action="" method="post" class="form-signin" novalidate>
+    <div class="row center">
+      <div class="col">
+        <h1 class="h3 mb-3 font-weight-normal">
+          Please sign in
+        </h1>
+      </div>
+        <!-- p>
+          {{ form.username(size=32, class='form-control', placeholder="E-mail address") }}
           {% for error in form.username.errors %}
           <span style="color: red;">{{ error }}</span>
           {% endfor %}
-        </p>
+        </!-- p>
         <p>
-          {{ form.password.label }} <br>
-          {{ form.password(size=32, class='input') }}
+          {{ form.password(size=32, class='form-control', placeholder="Password") }}
           {% for error in form.password.errors %}
           <span style="color: red;">{{ error }}</span>
           {% endfor %}
         </p>
+
+        {{ form.submit(class='btn btn-lg btn-primary btn-block') }} -->
+      <div class="col">
+        {% import "bootstrap/wtf.html" as wtf %}
+        {{ wtf.quick_form(form) }}
       </div>
-      <div name="remember_me" class="btn-block">
-        <p>
-          {{ form.remember_me.label }}
-          {{ form.remember_me }}
-        </p>
-      </div>
-      <div class="btn-block">
-        {{ form.submit() }}
-      </div>
+
     </div>
-</form>
-{% endblock body %}
+      
+  </form>
+</div>
+{% endblock %}
