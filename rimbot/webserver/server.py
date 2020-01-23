@@ -1,7 +1,7 @@
 from flask import request, render_template
 from flask import flash, url_for, redirect
 from flask import Flask, make_response
-from flask import abort
+from flask import abort, session
 
 from rimbot.webserver.forms import LoginForm
 
@@ -18,8 +18,12 @@ def login():
     if login_form.validate_on_submit():
         flash('Login requested for user {}, remember_me={}'.format(
             login_form.username.data, login_form.remember_me.data))
-        return redirect(url_for('index'))
 
+        session['username'] = login_form.username.data
+
+        # return redirect(url_for('index', name = session['username']))
+        return render_template('index.html', name = session['username'])
+    print(url_for('login'))
     return render_template('login.html', form = login_form)
 
 
