@@ -1,7 +1,7 @@
 import os
 
 db_dir = os.path.join(
-    os.path.abspath(os.path.dirname(__file__)), 'data'
+    os.path.abspath(os.path.dirname(__file__)), os.path.join('dataserver', 'data')
     )
 
 class Config:
