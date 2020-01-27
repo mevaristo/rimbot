@@ -1,6 +1,6 @@
 localtests
 *.log
-*.mylocal
+*.mylocal*
 .vscode
 __pycache__
 rimbot_venv
